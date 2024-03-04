@@ -1,0 +1,107 @@
+{
+  "name": "var-tran-plugin",
+  "displayName": "var_tran_plugin",
+  "description": "translate the selected text",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "var-tran-plugin.translate",
+        "title": "var-translate"
+      },
+      {
+        "command": "var-tran-plugin.translate_camelCase",
+        "title": "var-translate-camelCase"
+      },
+      {
+        "command": "var-tran-plugin.translate_PascalCase",
+        "title": "var-translate-PascalCase"
+      },
+      {
+        "command": "var-tran-plugin.translate_snake_case",
+        "title": "var-translate-snake_case"
+      },
+      {
+        "command": "var-tran-plugin.translate_china",
+        "title": "var-translate-china"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "var-tran-plugin.translate",
+        "key": "ctrl+q",
+        "mac": "cmd+q",
+        "linux": "ctrl+q",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-tran-plugin.translate_camelCase",
+        "key": "ctrl+1",
+        "mac": "cmd+1",
+        "linux": "ctrl+1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-tran-plugin.translate_PascalCase",
+        "key": "ctrl+2",
+        "mac": "cmd+2",
+        "linux": "ctrl+2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-tran-plugin.translate_snake_case",
+        "key": "ctrl+3",
+        "mac": "cmd+3",
+        "linux": "ctrl+3",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-tran-plugin.translate_china",
+        "key": "ctrl+4",
+        "mac": "cmd+4",
+        "linux": "ctrl+4",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "VarTran Configuration",
+      "properties": {
+        "varTranPlugin.TranslatorSelection": {
+          "type": "string",
+          "default": "bingTranslator",
+          "description": "选择默认翻译器",
+          "enum": [
+            "baiduTranslator",
+            "bingTranslator",
+            "iflyrecTranslator"
+          ]
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "node-translates": "^1.3.3"
+  }
+}
