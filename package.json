@@ -3,11 +3,22 @@
   "displayName": "var_tran_plugin",
   "description": "translate the selected text",
   "version": "0.0.3",
+  "publisher": "Bojaka2004",
   "engines": {
     "vscode": "^1.87.0"
   },
+  "icon": "images/icon.png",
   "categories": [
-    "Other"
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "var-tran-plugin",
+    "translate",
+    "variables",
+    "chinese-to-english",
+    "programming-languages",
+    "snippets"
   ],
   "activationEvents": [],
   "main": "./extension.js",
@@ -103,5 +114,9 @@
   },
   "dependencies": {
     "node-translates": "^1.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bojaka2004/var-tran-plugin.git"
   }
 }
