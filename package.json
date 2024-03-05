@@ -2,7 +2,7 @@
   "name": "var-tran-plugin",
   "displayName": "var_tran_plugin",
   "description": "translate the selected text",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Bojaka2004",
   "engines": {
     "vscode": "^1.87.0"
